@@ -1,8 +1,13 @@
+import { CounterProvider } from "./context/counter/CounterProvider";
+import Counter from "./Counter";
+
 const App = () => {
   return (
-    <div className="">
-      <h1 className="text-3xl text-rose-600">Test Tailwindcss</h1>
-    </div>
+    <CounterProvider>
+      <div className="flex items-center justify-center min-h-screen">
+        <Counter />
+      </div>
+    </CounterProvider>
   );
 };
 
